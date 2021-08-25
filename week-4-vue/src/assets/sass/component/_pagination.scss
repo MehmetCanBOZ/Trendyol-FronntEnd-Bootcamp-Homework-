@@ -1,0 +1,34 @@
+.pagination {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 100px;
+    height: 50px;
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin-left: 30px;
+    cursor: pointer;
+    background:#353535;
+    @media screen and (max-width:500px){
+      width: 50px;
+      height: 40px;
+   }
+  }
+  button:disabled{
+    background: #eee;
+    cursor:no-drop;
+    color: black;
+  }
+  button:not([disabled]):hover{
+    background-color: $starship;
+    color: #000;
+  }
+}
+
+

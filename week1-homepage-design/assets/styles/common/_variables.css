@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #f27a1a;
+    --primary-gray: #333;
+    --secondary-gray: #666;
+    --account-link-hover-color: var(--primary-color);
+
+    --zindex-navigation: 5;
+    --zindex-overlay: 4;
+    --zindex-dropdown: 7;
+    --zindex-search-history: 6;
+  }
+  

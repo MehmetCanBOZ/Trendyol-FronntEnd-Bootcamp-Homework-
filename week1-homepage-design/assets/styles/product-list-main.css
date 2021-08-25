@@ -1,0 +1,318 @@
+@import "./common/_reset.css";
+@import "./common/_variables.css";
+@import "./common/_header.css";
+
+
+/* Main Content Links*/
+.main-content .menu-links ul {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+
+.main-content .menu-links ul li a {
+  margin-right: 15px;
+  color: var(--primary-gray);
+  font-size: 14px;
+}
+.main-content .menu-links ul li a:hover{
+  text-decoration: underline;
+}
+
+/* Sidebar Product List */
+.list-content {
+  display: grid;
+  grid-template-columns: 185px 980px;
+  gap: 20px;
+}
+
+.list-content .product-top {
+  display: flex;
+  justify-content: space-between;
+}
+.list-content .product-top #option-dropdown {
+  width: 180px;
+  height: 30px;
+  align-self: baseline;
+  padding: 6px 0px 7px 8px;
+  font-size: 12px;
+  color: var(--secondary-gray);
+  border: 1px solid #e2e2e2;
+  outline: none;
+  background: transparent;
+  line-height: 15px;
+}
+.list-content .content-sidebar .sidebar-product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.list-content .content-sidebar .sidebar-product-list li a:hover{
+  color: #999;
+}
+.list-content .content-sidebar h1,
+.list-content .product-top h1,
+.list-content .brand-list h1,
+.list-content .opportunity-products h1 {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+.list-content .content-sidebar button {
+  border: 0px;
+  background: none;
+  color: var(--primary-color);
+  padding: 0px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.list-content .content-sidebar .sidebar-product-list a,
+.list-content .opportunity-products label {
+  color: black;
+  font-size: 13px;
+}
+
+/* .opportunity-products */
+.opportunity-products {
+  display: flex;
+  flex-direction: column;
+}
+.opportunity-products h1, 
+.brand-list h1,
+.price-interval h1 {
+  margin-bottom: 10px;
+}
+
+.opportunity-products .opportunity-product-item:hover,
+.opportunity-products .opportunity-product-item label:hover,
+
+.brand-list .brand-list-items .brand-list-item label:hover,
+
+.price-interval .price-interval-main a div label:hover,
+.price-interval .price-interval-main a div:hover,
+
+.free-ship .free-ship-item label:hover
+{
+  cursor:pointer;
+  color:#999;
+}
+
+.opportunity-products .opportunity-product-item .checkbox:hover::before,
+.brand-list .brand-list-items .brand-list-item .checkbox:hover::before,
+.free-ship .free-ship-item .checkbox:hover::before{
+  border-color: #b3b3b3;
+  cursor: pointer;
+}
+
+.opportunity-products .opportunity-product-item,
+.brand-list-items .brand-list-item,
+.free-ship .free-ship-item{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.opportunity-products input,
+.brand-list-items input,
+.free-ship .free-ship-item input {
+  display: none;
+}
+
+.opportunity-products .checkbox::before,
+.brand-list-item .checkbox::before,
+.free-ship .free-ship-item .checkbox::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #d6d6d6;
+  border-radius: 2px;
+}
+
+.opportunity-products label,
+.brand-list-item label {
+  margin-left: 25px;
+}
+
+/* .brand-list */
+.brand-list {
+  margin-bottom: 37px;
+}
+
+.brand-list input {
+  width: 175px;
+  height: 27px;
+  background-color: #fafafa;
+  border-radius: 3px;
+  border: 1px solid #e2e2e2;
+  padding:6px 0 6px 10px;
+  margin-bottom: 10px;
+}
+.brand-list .brand-list-items {
+  overflow-y: scroll;
+  height: 188px;
+  width: 175px;
+}
+.brand-list .brand-list-items::-webkit-scrollbar{
+  width: 8px;
+  border-radius: 100px;
+  background: #f1f1f1;
+}
+.brand-list .brand-list-items::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 100px;
+}
+
+.brand-list .brand-list-items .brand-list-item label {
+  font-size: 13px;
+}
+
+.brand-list input[type=text]{
+  font-size: 12px;
+  color: #4b4b4b;
+}
+.brand-list input:focus{
+  outline: none;
+}
+
+/* .price-interval */
+.price-interval .price-interval-top {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.price-interval .price-interval-top input{
+  width: 57px;
+  height: 27px;
+  border: 1px solid #e2e2e2;
+  background-color: #fafafa;
+  border-radius: 3px;
+  outline: none;
+  text-align: center;
+}
+.price-interval .price-interval-top input:last-child{
+  width: 27px;
+  height: 27px;
+  border-radius: 3px;
+  background: url("/assets/icons/icon-search-white.svg") no-repeat center #dadada;
+  align-self: center;
+  margin-left: 8px;
+}
+
+.price-interval .price-interval-top input::placeholder{
+  font-size: 12px;
+  color: #4b4b4b;
+}
+.price-interval .price-interval-main .price-interval-item {
+  margin: 16px 0 10px 0;
+  position: relative;
+  cursor: pointer;
+} 
+.price-interval .price-interval-main a{
+  color: black;
+}
+.price-interval .price-interval-main .price-interval-item input {
+  opacity: 0;
+  margin-right: 0;
+}
+.price-interval .price-interval-main .price-interval-item span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #d6d6d6; 
+}
+.price-interval .price-interval-main .price-interval-item label{
+  margin-left: 13px;
+  font-size: 12px;
+}
+
+/*.free-ship*/
+
+.brand-list .brand-list-items .brand-list-item label {
+  font-size: 13px;
+}
+.free-ship .free-ship-item label {
+  margin-left: 30px;
+}
+
+/* Product Cards */
+.product-cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
+.product-cards .card{
+  max-width: 230px;
+}
+
+.product-cards .card:hover{
+  box-shadow: 0px 3px 22px -13px rgba(102,102,102,0.95);
+  transition: box-shadow 0.6s ease-in-out;
+}
+
+.product-cards .card .card-info{
+  padding:10px 15px 10px 22px ;
+}
+
+.product-cards .card-img {
+  position: relative;
+}
+
+.product-cards .card-img .hearth-icon{
+position:absolute;
+top:10px;
+left: 177px;
+}
+
+.product-cards .card-img .hearth-icon:hover .icon-border{
+  stroke: var(--primary-color);
+}
+
+.product-cards .card .card-info .product-name{
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--primary-gray);
+}
+
+.product-cards .card .card-info .product-name span{
+  color: var(--secondary-gray);
+}
+
+.product-cards .card .card-info .card-star .product-comment{
+  color: #999;
+  font-size: 14px;
+} 
+
+.product-cards .card .card-info .product-price{
+  color: #878787;
+  font-size: 14px;
+}
+
+.product-cards .card .card-info .product-discount{
+  border-radius:3px;
+  border: 1px solid #ff671d;
+  width: 172px;
+  height: 26px;
+  font-size: 12px;
+  color: var(--secondary-gray);
+  padding-top: 2px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.product-cards .card .card-info .product-discount span{
+  color: #FF671D;
+  font-weight: 600;
+  font-size: 15px;
+}
